@@ -1,2 +1,323 @@
-<h1>Mi Portafolio</h1>
-<p> modificacion en el repositorio remoto</p>
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8">
+            <title>Mi Portafolio</title>
+        <meta name="description" content="Roughly 155 characters">
+        
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>                      
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+         <!-- Bootstrap CSS -->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        
+
+    </head>
+
+    <body>
+       
+        <div class= "card mat-card" id="first-card">
+             <div id="profile-background" ><img src="https://files.merca20.com/uploads/2019/10/bigstock-Doctor-With-Medical-Healthcare-287331085.jpg">
+                
+                    <!--https://www.google.com/url?sa=i&url=https%3A%2F%2Fgestion.pe%2Feconomia%2Fmanagement-empleo%2Fingenieria-biomedica-cual-es-la-oferta-laboral-para-una-de-las-carreras-mejor-remuneradas-noticia%2F&psig=AOvVaw0biQ1QsnNBhL9RtMHKww1E&ust=1674771961175000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNiNtZnj4_wCFQAAAAAdAAAAABAQ 
+                     https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hotcourseslatinoamerica.com%2Fstudy-abroad-info%2Fsubject-info%2Flos-conocimientos-de-ingeniero-biomedico-en-la-sociedad%2F&psig=AOvVaw0biQ1QsnNBhL9RtMHKww1E&ust=1674771961175000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNiNtZnj4_wCFQAAAAAdAAAAABAY 
+                     https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fes%2Fs%2Ffotos%2Fingenieria-biomedica&psig=AOvVaw0biQ1QsnNBhL9RtMHKww1E&ust=1674771961175000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNiNtZnj4_wCFQAAAAAdAAAAABA4      
+                    --></div> 
+            
+            <div id="info" style="padding: 16px" box-sizing="border-box"> 
+                <div id="info-img">
+                    <div class="btn-edit"> <a href="#" class="btn-right"><i class="bi bi-pen-fill"></i></a></div>
+                    <img class="profile-image" src="https://s36496.pcdn.co/wp-content/uploads/2017/11/9-si-foto-cv.png">
+                    
+                </div>
+                <div id="info-data"> 
+                    <div>
+                        <h1>Valentín Nicolás Golbert</h1>
+                        <div id="info-company">Estudiante Ingeniería Biomédica</div>
+                        <div id="info-contact">
+                            <span>Córdoba (Argentina)</span>
+                            <span><a href="#">Información de contacto</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="info-actions">
+                <button type="button" class="btn btn-primary">Tengo interés en</button>
+                <button type="button" class="btn btn-light">Añadir sección</button>
+                <button type="button" class="btn btn-light">Más</button>
+            </div>    
+        </div>
+        
+        <div class="card mat-card"> 
+            <div class="card-titles">
+                <h2>Acerca de Mi</h2>
+                    <div class="btn-edit" onclick="cambiar_parrafo()">
+                        <a href="#" class="btn-right"><i class="fas fa-pen"></i></a>
+                    </div>
+            </div>
+            <div>
+                <p id="text-acercade">Crack jfbis fhbhudhuf fbfbjf Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dicta ullam odio quam, dolorem porro pariatur soluta voluptas asperiores dolore, corporis voluptate eaque distinctio. Hic inventore minima dicta ipsam quis!</p>
+            </div>
+            <div>
+                <input id="edit-acercade" type="text" oninput="myFunction2(this.value)" style="display:none">
+            </div>
+            <br>
+            <input type="file" id="file1" onchange="showFile(this)">
+        </div>
+         
+
+    <script>
+         function cambiar_parrafo(){
+            document.getElementById("edit-acercade").style.display="block";
+            let texto = document.getElementById("text-acercade").innerText;
+            console.log(texto);
+            };
+            
+            function myFunction2(valor){
+                document.getElementById("text-acercade").innerText = valor;
+            };
+            
+            
+            function logMessage(message){
+                console.log(message + "<br>");
+            }
+            
+            let textarea = document.getElementById("edit-acercade")
+            textarea.addEventListener('keyup', (e)=> {
+                logMessage('Key "${e.key}" released [event: keyup]');
+                if(e.key=="Enter"){
+                    document.getElementById("edit-acercade").style.display="none"
+                }
+            });
+            
+            function showFile(input){
+                let file = input.files[0];
+                alert(`File name: ${file.name}`);
+                alert(`Last file: ${file.lastModified}`);
+            
+                let reader = new FileReader();
+                reader.readAsText(file);
+                reader.onload = function (){
+                    console.log(reader.result);
+                    document.getElementById("text-acercade").innerText = reader.result;
+                };
+                reader.onerror = function(){
+                console.log(reader.error);
+                };
+            }
+    </script>
+
+    <div class="card mat-card">
+            <div class="card-titles">
+                <div class="row justify-content-start" >
+                    <div class="col-10"><h2>Experiencia</h2></div>
+                    <div class="col-2">
+                        <div class="row justify-content-end">
+                            <a class="col-1" id="add-button" href="#"><li-icon><i class="fa fa-plus"></i></li-icon></a>
+                            <a class="col-1" id="edit-button" href="#"><li-icon><i class="fas fa-pen"></i></li-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        <div class="card-body" style="padding:0px">
+            <ul class="info-details">
+                <li class="list">
+                    <div class="element-list">
+                        <div>
+                            <a href="https://www.starbucks.com.ar/">
+                                <div class="logo">
+                                    <div class="logo-img">
+                                        <img width="70" height="70" src="https://images.squarespace-cdn.com/content/v1/569be0f569492e9dd52735b6/1458855947123-5KZ8HPDFJ2ZIC5B8QE9R/http%3A%2F%2Fwww.starbucks.ca%2F">
+                                    </div>
+                                </div>
+                            </a> 
+                        </div>
+                        <div class="text-list">
+                            <div class="title-list">
+                                <span style="font-weight:600">
+                                    <span>
+                                        Starbucks & Co
+                                    </span>
+                                </span>
+                            </div>
+                            <span class="institute">
+                                Starbucks
+                            </span>
+                            <span class="date-expedition">
+                                Expedición: sep. 2022
+                            </span>
+                        </div> 
+                    </div>
+                </li>
+                <li class="list">
+                    <div class="element-list">
+                        <div>
+                            <a href="https://www.ib.edu.ar/">
+                                <div class="logo">
+                                    <div class="logo-img">
+                                        <img width="70" height="70" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT_yEkdaSLHdwUKMfFG0H8XsP6a9Q-kWtG86JCwsYwRw&s">
+                                    </div>
+                                </div>
+                            </a> 
+                        </div>
+                        <div class="text-list">
+                            <div class="title-list">
+                                <span style="font-weight:600">
+                                    <span>
+                                        Beca Instituto Balseiro 2021 para alumnos de escuelas de enseñanza secundaria 
+                                    </span>
+                                </span>
+                            </div>
+                            <span class="institute">
+                                Instituto Balseiro
+                            </span>
+                            <span class="date-expedition">
+                                Expedición: nov. 2021
+                            </span>
+                        </div> 
+                    </div>
+                </li>
+            </ul>
+        </div>                    
+    </div>
+    
+
+        <div class="card mat-card">
+            <div class="card-titles">
+                <div class="row justify-content-start" >
+                    <div class="col-10"><h2>Educación</h2></div>
+                    <div class="col-2">
+                        <div class="row justify-content-end">
+                            <div class="col-1" id="add-button">
+                                <a class="btn-right" href="#"><li-icon><i class="fa fa-plus"></i></li-icon></a>
+                            </div>
+                            <div class="col-1" id="edit-button">
+                                <a class="btn-right" href="#"><li-icon><i class="fas fa-pen"></i></li-icon></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+            </div>          
+        </div>
+
+        <div class="card mat-card">
+            <div class="card-titles">
+                <div class="row justify-content-start" >
+                    <div class="col-10"><h2>Logros y certificaciones</h2></div>
+                    <div class="col-2">
+                        <div class="row justify-content-end">
+                            <div class="col-1" id="add-button">
+                                <a class="btn-right" href="#"><li-icon><i class="fa fa-plus"></i></li-icon></a>
+                            </div>
+                            <div class="col-1" id="edit-button">
+                                <a class="btn-right" href="#"><li-icon><i class="fas fa-pen"></i></li-icon></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+            </div>          
+        </div>
+
+        <div class="card mat-card">
+            <div class="card-titles">
+                <div class="row justify-content-start" >
+                    <div class="col-10"><h2>Proyectos</h2></div>
+                    <div class="col-2">
+                        <div class="row justify-content-end">
+                            <div class="col-1" id="add-button">
+                                <a class="btn-right" href="#"><li-icon><i class="fa fa-plus"></i></li-icon></a>
+                            </div>
+                            <div class="col-1" id="edit-button">
+                                <a class="btn-right" href="#"><li-icon><i class="fas fa-pen"></i></li-icon></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+            </div>          
+        </div>
+
+        <div class="card mat-card">
+            <div class="card-titles">
+                <div class="row justify-content-start" >
+                    <div class="col-10"><h2>Habilidades duras y blandas</h2></div>
+                    <div class="col-2">
+                        <div class="row justify-content-end">
+                            <div class="col-1" id="add-button">
+                                <a class="btn-right" href="#"><li-icon><i class="fa fa-plus"></i></li-icon></a>
+                            </div>
+                            <div class="col-1" id="edit-button">
+                                <a class="btn-right" href="#"><li-icon><i class="fas fa-pen"></i></li-icon></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+            </div>          
+        </div>
+        
+    <footer>
+        <p>Medios de Contacto:</p>
+        <address>
+            Email:<a href="valentin.golbert@gmail.com"> valentin.golbert@gmail.com</a>
+            <br/>
+            Tel.:<a href="+54 351 769 2034"> +54 351 769 2034</a>
+        </address>
+    </footer>
+
+
+        
+ <!-- Bootstrap JS --> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+
+
+
+<!-- MODAL -->
+
+ <!-- Trigger the modal with a button -->
+ <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+ <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+ <button type="button" class="close" data-dismiss="modal">&times;</button>
+ <h4 class="modal-title">Modal Header</h4>
+</div>
+<div class="modal-body">
+ <p>Some text in the modal.</p>
+</div>
+<div class="modal-footer">
+ <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div>
+
+</div>
+</div>
+
+    </body>
+</html>
+
+
+
+
+ 
