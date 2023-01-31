@@ -2,18 +2,16 @@
 <html lang=en>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>Mi Portafolio</title>
         <meta name="description" content="Roughly 155 characters">
         
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>                      
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-         <!-- Bootstrap CSS -->
-         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script src="script.js"></script>
-        
+        <link rel="stylesheet" type="text/css" href="styles.css"> <!--relaciona con la hoja de estilo-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"><!--para el icono de lapicera y singo más-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet"/> <!--sirve para darle estilo a los modals-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- no se qué hace pero estab con los modals-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> <!--no se qué hace-->
 
     </head>
 
@@ -29,7 +27,7 @@
             
             <div id="info" style="padding: 16px" box-sizing="border-box"> 
                 <div id="info-img">
-                    <div class="btn-edit"> <a href="#" class="btn-right"><i class="bi bi-pen-fill"></i></a></div>
+                    <div class="btn-edit"> <a href="#" class="btn-right"><i class="bi bi-pen-fill" id="abrirModal"></i></a></div>
                     <img class="profile-image" src="https://s36496.pcdn.co/wp-content/uploads/2017/11/9-si-foto-cv.png">
                     
                 </div>
@@ -67,64 +65,23 @@
             <br>
             <input type="file" id="file1" onchange="showFile(this)">
         </div>
-         
 
-    <script>
-         function cambiar_parrafo(){
-            document.getElementById("edit-acercade").style.display="block";
-            let texto = document.getElementById("text-acercade").innerText;
-            console.log(texto);
-            };
-            
-            function myFunction2(valor){
-                document.getElementById("text-acercade").innerText = valor;
-            };
-            
-            
-            function logMessage(message){
-                console.log(message + "<br>");
-            }
-            
-            let textarea = document.getElementById("edit-acercade")
-            textarea.addEventListener('keyup', (e)=> {
-                logMessage('Key "${e.key}" released [event: keyup]');
-                if(e.key=="Enter"){
-                    document.getElementById("edit-acercade").style.display="none"
-                }
-            });
-            
-            function showFile(input){
-                let file = input.files[0];
-                alert(`File name: ${file.name}`);
-                alert(`Last file: ${file.lastModified}`);
-            
-                let reader = new FileReader();
-                reader.readAsText(file);
-                reader.onload = function (){
-                    console.log(reader.result);
-                    document.getElementById("text-acercade").innerText = reader.result;
-                };
-                reader.onerror = function(){
-                console.log(reader.error);
-                };
-            }
-    </script>
 
-    <div class="card mat-card">
+<!--SECCIONES-->
+
+        <div class="card mat-card">
             <div class="card-titles">
                 <div class="row justify-content-start" >
                     <div class="col-10"><h2>Experiencia</h2></div>
                     <div class="col-2">
                         <div class="row justify-content-end">
-                            <a class="col-1" id="add-button" href="#"><li-icon><i class="fa fa-plus"></i></li-icon></a>
-                            <a class="col-1" id="edit-button" href="#"><li-icon><i class="fas fa-pen"></i></li-icon></a>
+                            <a class="col-1" id="add-button"><li-icon><i class="fa fa-plus" data-toggle="modal" data-target=".bd-example-modal-lg" id="add-experience"></i></li-icon></a>
+                            <a class="col-1" id="edit-button"><li-icon><i id="trigger-btn-edit-experience" class="fas fa-pen"></i></li-icon></a>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-        <div class="card-body" style="padding:0px">
+            <div class="card-body" style="padding:0px">
             <ul class="info-details">
                 <li class="list">
                     <div class="element-list">
@@ -152,6 +109,7 @@
                                 Expedición: sep. 2022
                             </span>
                         </div> 
+                        <a id="edit-button"><li-icon><i id="btn-edit-experience" class="fas fa-pen"></i></li-icon></a>
                     </div>
                 </li>
                 <li class="list">
@@ -180,12 +138,12 @@
                                 Expedición: nov. 2021
                             </span>
                         </div> 
+                        <a id="edit-button"><li-icon><i id="btn-edit-experience" class="fas fa-pen"></i></li-icon></a>
                     </div>
                 </li>
             </ul>
-        </div>                    
-    </div>
-    
+            </div>     
+        </div>
 
         <div class="card mat-card">
             <div class="card-titles">
@@ -193,12 +151,8 @@
                     <div class="col-10"><h2>Educación</h2></div>
                     <div class="col-2">
                         <div class="row justify-content-end">
-                            <div class="col-1" id="add-button">
-                                <a class="btn-right" href="#"><li-icon><i class="fa fa-plus"></i></li-icon></a>
-                            </div>
-                            <div class="col-1" id="edit-button">
-                                <a class="btn-right" href="#"><li-icon><i class="fas fa-pen"></i></li-icon></a>
-                            </div>
+                            <a class="col-1" id="add-button"><li-icon><i class="fa fa-plus" data-toggle="modal" data-target="#add-education"></i></li-icon></a>
+                            <a class="col-1" id="edit-button"><li-icon><i class="fas fa-pen"></i></li-icon></a>
                         </div>
                     </div>
                 </div>
@@ -214,11 +168,9 @@
                     <div class="col-10"><h2>Logros y certificaciones</h2></div>
                     <div class="col-2">
                         <div class="row justify-content-end">
-                            <div class="col-1" id="add-button">
-                                <a class="btn-right" href="#"><li-icon><i class="fa fa-plus"></i></li-icon></a>
-                            </div>
-                            <div class="col-1" id="edit-button">
-                                <a class="btn-right" href="#"><li-icon><i class="fas fa-pen"></i></li-icon></a>
+                            <div class="row justify-content-end">
+                                <a class="col-1" id="add-button"><li-icon><i class="fa fa-plus"></i></li-icon></a>
+                                <a class="col-1" id="edit-button"><li-icon><i class="fas fa-pen"></i></li-icon></a>
                             </div>
                         </div>
                     </div>
@@ -235,11 +187,9 @@
                     <div class="col-10"><h2>Proyectos</h2></div>
                     <div class="col-2">
                         <div class="row justify-content-end">
-                            <div class="col-1" id="add-button">
-                                <a class="btn-right" href="#"><li-icon><i class="fa fa-plus"></i></li-icon></a>
-                            </div>
-                            <div class="col-1" id="edit-button">
-                                <a class="btn-right" href="#"><li-icon><i class="fas fa-pen"></i></li-icon></a>
+                            <div class="row justify-content-end">
+                                <a class="col-1" id="add-button"><li-icon><i class="fa fa-plus"></i></li-icon></a>
+                                <a class="col-1" id="edit-button"><li-icon><i class="fas fa-pen"></i></li-icon></a>
                             </div>
                         </div>
                     </div>
@@ -270,7 +220,135 @@
             <div class="card-body">
             </div>          
         </div>
-        
+
+
+<!--TODOS LOS MODALS-->
+    <!--Seccion Experiencias-->
+            <!--AGREGAR-->
+            <div class="modal fade bd-example-modal-lg" id="add-experience" tabindex="-1" role="dialog" aria-labelledby="add-exp" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="add-exp">Agregar experiencia</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputCargo">Cargo*</label>
+                                <input type="text" class="form-control" id="inputCargo" placeholder="Ejemplo: respondable de ventas mayoristas">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmpleo">Tipo de empleo</label>
+                                <select id="inputEmpleo" class="form-control">
+                                    <option selected>Selecciona una opción</option>
+                                    <option>Autónomo</option>
+                                    <option>Contrato de formación</option>
+                                    <option>Contrato de prácticas</option>
+                                    <option>Contrato temporal</option>
+                                    <option>Jornada completa</option>
+                                    <option>Jornada parcial</option>
+                                    <option>Profesional independiente</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputCompany">Nombre de la Empresa*</label>
+                                <input type="text" class="form-control" id="inputCompany" placeholder="P. ej. Amazon">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress">Ubicacción</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="P. ej. Londres, Inglaterra">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-type-ubi">Tipo de ubicacción</label>
+                                <select id="input-type-ubi" class="form-control">
+                                    <option selected>Selecciona una opción</option>
+                                    <option>Presencial</option>
+                                    <option>Híbrido</option>
+                                    <option>Remoto</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSector">Sector*</label>
+                                <input type="text" class="form-control" id="inputSector" placeholder="P. ej. venta al por mayor">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="inputDate">Fecha de inicio*</label>
+                                  <select id="inputDate" class="form-control">
+                                        <option selected>Mes</option>
+                                        <option>Enero</option>
+                                        <option>Febrero</option>
+                                        <option>Marzo</option>
+                                        <option>Abril</option>
+                                        <option>Mayo</option>
+                                        <option>Junio</option>
+                                        <option>Julio</option>
+                                        <option>Agosto</option>
+                                        <option>Septiembre</option>
+                                        <option>Octubre</option>
+                                        <option>Noviembre</option>
+                                        <option>Diciembre</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="inputYear">.</label>
+                                  <select id="inputYear" class="form-control">
+                                        <option selected>Año</option>
+                                        <option>2022</option>
+                                        <option>2021</option>
+                                        <option>2020</option>
+                                        <option>2019</option>
+                                        <option>2018</option>
+                                        <option>2017</option>
+                                        <option>2016</option>
+                                        <option>2015</option>
+                                        <option>2014</option>
+                                        <option>2013</option>
+                                        <option>2012</option>
+                                        <option>2011</option>
+                                        <option>2010</option>
+                                </select>
+                                </div>
+                              </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+
+    <!--Seccion Educacion-->
+            <!--AGREGAR (falta hacer modal) -->
+            <div class="modal fade" id="add-education" tabindex="-1" role="dialog" aria-labelledby="add-edu" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="add-edu">Nueva Educacion</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  esto es para agregar
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+
+
     <footer>
         <p>Medios de Contacto:</p>
         <address>
@@ -283,36 +361,9 @@
 
         
  <!-- Bootstrap JS --> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
-
-
-
-<!-- MODAL -->
-
- <!-- Trigger the modal with a button -->
- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
- <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-<div class="modal-dialog">
-
-<!-- Modal content-->
-<div class="modal-content">
-<div class="modal-header">
- <button type="button" class="close" data-dismiss="modal">&times;</button>
- <h4 class="modal-title">Modal Header</h4>
-</div>
-<div class="modal-body">
- <p>Some text in the modal.</p>
-</div>
-<div class="modal-footer">
- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-</div>
-</div>
-
-</div>
-</div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> <!--me permite usar modal con bs-->
+ <script src="script.js"></script> <!--relaciona con la hoja de js-->
 
     </body>
 </html>

@@ -1,3 +1,4 @@
+//ESTO ES DEL BOTON DE EDICION DEL ACERCA DE
 function cambiar_parrafo(){
 document.getElementById("edit-acercade").style.display="block";
 let texto = document.getElementById("text-acercade").innerText;
@@ -19,7 +20,7 @@ textarea.addEventListener('keyup', (e)=> {
     if(e.key=="Enter"){
         document.getElementById("edit-acercade").style.display="none"
     }
-}};
+});
 
 function showFile(input){
     let file = input.files[0];
@@ -36,3 +37,14 @@ function showFile(input){
     console.log(reader.error);
     };
 }
+
+//seccion: Experiencia
+//cuando toco el boton edit me aprecen los botones para editar cada item de la lista
+var btn = document.getElementById("trigger-btn-edit-experience");
+var exp = document.getElementById("btn-edit-experience");
+
+btn.addEventListener("click", function() {
+    exp.style.display = "block";
+  });
+
+
