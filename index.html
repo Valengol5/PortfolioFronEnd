@@ -1,3 +1,5 @@
+<!--MODELO DE PAGINA CUANDO ESTAS LOG OUT con texto justificado-->
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -75,80 +77,13 @@
                         <div id="name">
                             <h5 class="description-profile">Valentín Nicolás Golbert</h5>
                             <h6 class="description-profile">Estudiante Ingeniería Biomédica</h6>
-                            <!--Trigger button-->
-                            <button id="btn-edit-profile" style="font-weight:450" class="description-profile" type="button" data-bs-toggle="modal" data-bs-target="#profileModal">Editar perfil</button>
-                        
-                            <!-- Modal -->
-                            <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="perfil" aria-hidden="true">
-                        <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="perfil">Datos personales</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="Banner" class="form-label">Banner</label>
-                                        <input class="form-control" type="file" id="Banner" name="banner" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="FotoPerfil" class="form-label">Foto de perfil</label>
-                                        <input class="form-control" type="file" id="FotoPerfil" name="FotoPerfil" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="InputNombre" class="form-label">Nombre completo</label>
-                                        <input type="text" class="form-control" id="InputNombre" name="InputNombre" required>
-                                    </div>
-                                    <div>
-                                        <label for="InputProfesion" class="form-label">Profesión</label>
-                                        <input type="text" class="form-control" id="InputProfesion" name="InputProfesion">
-                                    </div>
-                                </form>
-                            </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Guardar cambios</button>
-                            </div>
-                        </div>
-                        </div>
-                            </div>
-
                         </div>
                     </div> 
                 </div>
-                <div class="col-7" id="acercade">
+                <div class="col-8" id="acercade">
                     <div class="body-title">
                         <h5 class="description-profile"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reprehenderit sit numquam, minus natus sequi dolorum quisquam vero blanditiis itaque maiores explicabo magni. Veniam sed quos explicabo numquam impedit magni? Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
                     </div>
-                </div>
-                <div class="col-1 mt-3" style="padding-left:0">
-                <!--Edit descripction trigger-->
-                    <a class="col-1" id="btn-edit-aboutme"><i class="fas fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#acercadeModal"></i></a>
-                    <a class="col-1" id="btn-delete-aboutme"><i class="fa-solid fa-trash"></i></a>
-
-                <!-- Description Modal -->
-                    <div class="modal fade" id="acercadeModal" tabindex="-1" aria-labelledby="acercade" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="acercade">Editar descripción</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="EditarDescripcion" class="form-label">descripción</label>
-                                <textarea class="form-control" id="EditarDescripcion" rows="3" name="EditarDescripcion"></textarea>
-                            </div>
-                        </form>
-                    </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Guardar cambios</button>
-                    </div>
-                </div>
-                </div>
-                    </div>
-
                 </div>
             </div> 
         </div>
@@ -158,60 +93,7 @@
         <div class="card-titles">
             <div class="row justify-content-start" >
                 <div class="col-10"><h3>Experiencia</h3></div>
-                <div class="col-2">
-            <!--Add experience trigger-->
-                    <div class="row justify-content-end">
-                        <a class="col-1" id="btn-add-experience"><i class="fa fa-plus" type="button" data-bs-toggle="modal" data-bs-target="#addExperience"></i></a>
-                    </div>
-
-                <!--MODAL add experience--> 
-                        <div class="modal fade" id="addExperience" tabindex="-1" aria-labelledby="add-exp" aria-hidden="true">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="add-exp">Nueva experiencia</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="mb-3">
-                                            <label for="Cargo-exp" class="form-label">Cargo</label>
-                                            <input type="text" class="form-control" id="Cargo-exp" name="Cargo-exp" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="Empresa-exp" class="form-label">Empresa</label>
-                                            <input type="password" class="form-control" id="Empresa-exp" name="Empresa-exp" required>
-                                        </div>
-                                        <div class="mb-4">
-                                            <label for="LogoEmpresa" class="form-label">Logo de la Empresa</label>
-                                            <input class="form-control" type="file" id="LogoEmpresa" name="LogoEmpresa" required>
-                                        </div>
-                                        <div class="row g-3">
-                                        <div class="form-group col-md-6 mb-3">
-                                            <label for="FechaInicio" class="form-label">Fecha de Inicio</label>
-                                            <input class="form-control" type="Date" id="FechaInicio" name="FechaInicio" required>
-                                        </div>
-                                        <div class="form-group col-md-6 mb-3">
-                                            <label for="FechaFinalizacion" class="form-label">Fecha de Finalización</label>
-                                            <input class="form-control" type="Date" id="FechaFinalizacion" name="FechaFinalizacion">
-                                        </div>
-                                        </div>
-                                        <div>
-                                            <label for="EmpleoDescripcion" class="form-label">Descripción  del empleo (opcional)</label>
-                                            <textarea class="form-control" id="EmpleoDescripcion" rows="2" name="EmpleoDescripcion"></textarea>
-                                        </div>
-                                    </form>
-                                </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary">Guardar cambios</button>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                </div>
             </div>
-            
-      
         </div>
         <div class="card-body" style="padding:0px">
         <ul class="info-details">
@@ -238,58 +120,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="col-1">
-                    <!--Edit experience trigger-->
-                        <a class="edit-btn" id="btn-edit-experience" ><i class="fas fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editExperience"></i></a>
-                        <a class="delete-btn" id="btn-delete-experience"><i class="fa-solid fa-trash" ></i></a>
-                        
-                    <!--MODAL edit experience--> 
-                            <div class="modal fade" id="editExperience" tabindex="-1" aria-labelledby="edit-exp" aria-hidden="true">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="edit-exp">Editar experiencia</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="Cargo-exp" class="form-label">Cargo</label>
-                                                <input type="text" class="form-control" id="Cargo-exp" name="Cargo-exp" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="Empresa-exp" class="form-label">Empresa</label>
-                                                <input type="password" class="form-control" id="Empresa-exp" name="Empresa-exp" required>
-                                            </div>
-                                            <div class="mb-4">
-                                                <label for="LogoEmpresa" class="form-label">Logo de la Empresa</label>
-                                                <input class="form-control" type="file" id="LogoEmpresa" name="LogoEmpresa" required>
-                                            </div>
-                                            <div class="row g-3">
-                                            <div class="form-group col-md-6 mb-3">
-                                                <label for="FechaInicio" class="form-label">Fecha de Inicio</label>
-                                                <input class="form-control" type="Date" id="FechaInicio" name="FechaInicio" required>
-                                            </div>
-                                            <div class="form-group col-md-6 mb-3">
-                                                <label for="FechaFinalizacion" class="form-label">Fecha de Finalización</label>
-                                                <input class="form-control" type="Date" id="FechaFinalizacion" name="FechaFinalizacion">
-                                            </div>
-                                            </div>
-                                            <div>
-                                                <label for="EmpleoDescripcion" class="form-label">Descripción  del empleo (opcional)</label>
-                                                <textarea class="form-control" id="EmpleoDescripcion" rows="2" name="EmpleoDescripcion"></textarea>
-                                            </div>
-                                        </form>
-                                    </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">Guardar cambios</button>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                    
-                    </div>
-                    <div class="col-10 mt-3" style="margin-left:6.5%">
+                    <div class="col-11 mt-3" style="margin-left:6.5%">
                         <h6>Prosopografía. Es un tipo de descripción que se enfoca en los rasgos físicos de la persona. Por ejemplo: María tiene ojos grandes, negros y tristes. Su cabello es de color azabache.
                             Etopeya. Describe rasgos de aspecto psicológico o morales. También se describen sentimientos y la personalidad del personaje. Por ejemplo: María es muy religiosa. Siempre fue misa los domingos y jamás hizo nada indebido.
                         </h6>
@@ -319,11 +150,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="col-1">
-                    <a class="edit-btn" id="btn-edit-experience"><i class="fas fa-pen"></i></a>
-                    <a class="delete-btn" id="btn-delete-experience"><i  class="fa-solid fa-trash"></i></a>
-                    </div>
-                    <div class="col-10 mt-3" style="margin-left:6.5%">
+                    <div class="col-11 mt-3" style="margin-left:6.5%">
                         <h6>Prosopografía. Es un tipo de descripción que se enfoca en los rasgos físicos de la persona. Por ejemplo: María tiene ojos grandes, negros y tristes. Su cabello es de color azabache.
                             Etopeya. Describe rasgos de aspecto psicológico o morales. También se describen sentimientos y la personalidad del personaje. Por ejemplo: María es muy religiosa. Siempre fue misa los domingos y jamás hizo nada indebido.
                         </h6>
@@ -353,11 +180,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="col-1">
-                    <a class="edit-btn" id="btn-edit-experience"><i class="fas fa-pen"></i></a>
-                    <a class="delete-btn" id="btn-delete-experience"><i class="fa-solid fa-trash"></i></a>
-                    </div>
-                    <div class="col-10 mt-3" style="margin-left:6.5%">
+                    <div class="col-11 mt-3" style="margin-left:6.5%">
                         <h6> Ingeniería biomedica is the best.
                         </h6>
                     </div>
@@ -371,58 +194,6 @@
         <div class="card-titles">
             <div class="row justify-content-start" >
                 <div class="col-10"><h3>Educación</h3></div>
-                <div class="col-2">
-                    <div class="row justify-content-end">
-                    <!--Add education trigger-->
-                        <a class="col-1" id="btn-add-education"><i class="fa fa-plus" type="button" data-bs-toggle="modal" data-bs-target="#addEducation"></i></a>
-                        
-                    <!--MODAL add education--> 
-                            <div class="modal fade" id="addEducation" tabindex="-1" aria-labelledby="add-edu" aria-hidden="true">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="add-edu">Nuevo estudio</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="Estudio" class="form-label">Estudio</label>
-                                                <input type="text" class="form-control" id="Estudio" name="Estudio" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="Empresa" class="form-label">Institución</label>
-                                                <input type="password" class="form-control" id="Empresa" name="Empresa" required>
-                                            </div>
-                                            <div class="mb-4">
-                                                <label for="LogoEmpresa" class="form-label">Logo de la Institución</label>
-                                                <input class="form-control" type="file" id="LogoEmpresa" name="LogoEmpresa" required>
-                                            </div>
-                                            <div class="row g-3">
-                                            <div class="form-group col-md-6 mb-3">
-                                                <label for="FechaInicio" class="form-label">Fecha de Inicio</label>
-                                                <input class="form-control" type="Date" id="FechaInicio" name="FechaInicio" required>
-                                            </div>
-                                            <div class="form-group col-md-6 mb-3">
-                                                <label for="FechaFinalizacion" class="form-label">Fecha de Finalización</label>
-                                                <input class="form-control" type="Date" id="FechaFinalizacion" name="FechaFinalizacion">
-                                            </div>
-                                            </div>
-                                            <div>
-                                                <label for="EmpleoDescripcion" class="form-label">Descripción (opcional)</label>
-                                                <textarea class="form-control" id="EmpleoDescripcion" rows="2" name="EmpleoDescripcion"></textarea>
-                                            </div>
-                                        </form>
-                                    </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">Guardar cambios</button>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-
-                    </div>                
-                </div>
             </div>
         </div>
         <div class="card-body" style="padding:0px">
@@ -450,58 +221,7 @@
                                 </div> 
                             </div>
                         </div>
-                        <div class="col-1">
-                    <!--Edit education trigger-->
-                        <a class="edit-btn" id="btn-edit-education"><i class="fas fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editEducation"></i></a>
-                        <a class="delete-btn" id="btn-delete-education"><i class="fa-solid fa-trash" ></i></a>
-                        
-                    <!--MODAL edit education--> 
-                            <div class="modal fade" id="editEducation" tabindex="-1" aria-labelledby="edit-edu" aria-hidden="true">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="edit-edu">Editar estudio</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="Estudio" class="form-label">Estudio</label>
-                                                <input type="text" class="form-control" id="Estudio" name="Estudio" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="Empresa" class="form-label">Institución</label>
-                                                <input type="password" class="form-control" id="Empresa" name="Empresa" required>
-                                            </div>
-                                            <div class="mb-4">
-                                                <label for="LogoEmpresa" class="form-label">Logo de la Institución</label>
-                                                <input class="form-control" type="file" id="LogoEmpresa" name="LogoEmpresa" required>
-                                            </div>
-                                            <div class="row g-3">
-                                            <div class="form-group col-md-6 mb-3">
-                                                <label for="FechaInicio" class="form-label">Fecha de Inicio</label>
-                                                <input class="form-control" type="Date" id="FechaInicio" name="FechaInicio" required>
-                                            </div>
-                                            <div class="form-group col-md-6 mb-3">
-                                                <label for="FechaFinalizacion" class="form-label">Fecha de Finalización</label>
-                                                <input class="form-control" type="Date" id="FechaFinalizacion" name="FechaFinalizacion">
-                                            </div>
-                                            </div>
-                                            <div>
-                                                <label for="EstudioDescripcion" class="form-label">Descripción (opcional)</label>
-                                                <textarea class="form-control" id="EstudioDescripcion" rows="2" name="EstudioDescripcion"></textarea>
-                                            </div>
-                                        </form>
-                                    </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">Guardar cambios</button>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                    
-                        </div>
-                        <div class="col-10 mt-3" style="margin-left:6.5%">
+                        <div class="col-11 mt-3" style="margin-left:6.5%">
                             <h6>Promedio general: 9.15
                             </h6>
                         </div>
@@ -530,11 +250,7 @@
                                 </div> 
                             </div>
                         </div>
-                        <div class="col-1">
-                        <a class="edit-btn" id="btn-edit-education"><i class="fas fa-pen"></i></a>
-                        <a class="delete-btn" id="btn-delete-education"><i  class="fa-solid fa-trash"></i></a>
-                        </div>
-                        <div class="col-10 mt-3" style="margin-left:6.5%">
+                        <div class="col-11 mt-3" style="margin-left:6.5%">
                             <h6>
                             </h6>
                         </div>
@@ -563,11 +279,7 @@
                                 </div> 
                             </div>
                         </div>
-                        <div class="col-1">
-                        <a class="edit-btn" id="btn-edit-education"><i class="fas fa-pen"></i></a>
-                        <a class="delete-btn" id="btn-delete-education"><i  class="fa-solid fa-trash"></i></a>
-                        </div>
-                        <div class="col-10 mt-3" style="margin-left:6.5%">
+                        <div class="col-11 mt-3" style="margin-left:6.5%">
                             <h6>
                             </h6>
                         </div>
@@ -581,52 +293,6 @@
         <div class="card-titles">
             <div class="row justify-content-start" >
                 <div class="col-10"><h3>Logros y certificaciones</h3></div>
-                <div class="col-2">
-                    <div class="row justify-content-end">
-                        <!--Add certification trigger-->
-                            <a class="col-1" id="btn-add-certifications"><i class="fa fa-plus" type="button" data-bs-toggle="modal" data-bs-target="#addCertification"></i></a>
-                        
-                        <!--MODAL add certifiaction--> 
-                            <div class="modal fade" id="addCertification" tabindex="-1" aria-labelledby="add-certficate" aria-hidden="true">
-                                <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h1 class="modal-title fs-5" id="add-certificate">Nuevo certiifcado</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="Certificado" class="form-label">Titulo de Certificado</label>
-                            <input type="text" class="form-control" id="Certificado" name="Certificado" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="Empresa" class="form-label">Institución</label>
-                            <input type="password" class="form-control" id="Empresa" name="Empresa" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="LogoEmpresa" class="form-label">Logo de la Institución</label>
-                            <input class="form-control" type="file" id="LogoEmpresa" name="LogoEmpresa" required>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="FechaInicio" class="form-label">Fecha de Expedición</label>
-                            <input class="form-control" type="Date" id="FechaInicio" name="FechaInicio" required>
-                        </div>
-                        <div>
-                            <label for="CertificadoDescripcion" class="form-label">Descripción</label>
-                            <textarea class="form-control" id="CertificadoDescripcion" rows="3" name="CertificadoDescripcion" required></textarea>
-                        </div>
-                    </form>
-                </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Guardar cambios</button>
-                </div>
-            </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="card-body" style="padding:0px">
@@ -654,52 +320,7 @@
                                 </div> 
                             </div>
                         </div>
-                        <div class="col-1">
-                            <!--Edit certification trigger-->
-                        <a class="edit-btn" id="btn-edit-certification"><i class="fas fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editCertification"></i></a>
-                        <a class="delete-btn" id="btn-delete-certification"><i  class="fa-solid fa-trash"></i></a>
-
-                            <!--MODAL edit certifiaction--> 
-                            <div class="modal fade" id="editCertification" tabindex="-1" aria-labelledby="edit-certficate" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="edit-certificate">Editar certificado</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form>
-                                                <div class="mb-3">
-                                                    <label for="Certificado" class="form-label">Titulo de Certificado</label>
-                                                    <input type="text" class="form-control" id="Certificado" name="Certificado" required>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="Empresa" class="form-label">Institución</label>
-                                                    <input type="password" class="form-control" id="Empresa" name="Empresa" required>
-                                                </div>
-                                                <div class="mb-4">
-                                                    <label for="LogoEmpresa" class="form-label">Logo de la Institución</label>
-                                                    <input class="form-control" type="file" id="LogoEmpresa" name="LogoEmpresa" required>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="FechaInicio" class="form-label">Fecha de Expedición</label>
-                                                    <input class="form-control" type="Date" id="FechaInicio" name="FechaInicio" required>
-                                                </div>
-                                                <div>
-                                                    <label for="CertificadoDescripcion" class="form-label">Descripción (opcional)</label>
-                                                    <textarea class="form-control" id="CertificadoDescripcion" rows="2" name="CertificadoDescripcion"></textarea>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary">Guardar cambios</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-10 mt-3" style="margin-left:6.5%">
+                        <div class="col-11 mt-3" style="margin-left:6.5%">
                             <h6>
                                 Nivel A2
                             </h6>
@@ -729,11 +350,7 @@
                                 </div> 
                             </div>
                         </div>
-                        <div class="col-1">
-                        <a class="edit-btn" id="btn-edit-certification"><i class="fas fa-pen"></i></a>
-                        <a class="delete-btn" id="btn-delete-certification"><i  class="fa-solid fa-trash"></i></a>
-                        </div>
-                        <div class="col-10 mt-3" style="margin-left:6.5%">
+                        <div class="col-11 mt-3" style="margin-left:6.5%">
                             <h6>
                             </h6>
                         </div>
@@ -762,11 +379,7 @@
                                 </div> 
                             </div>
                         </div>
-                        <div class="col-1">
-                        <a class="edit-btn" id="btn-edit-certification"><i class="fas fa-pen"></i></a>
-                        <a class="delete-btn" id="btn-delete-certification"><i  class="fa-solid fa-trash"></i></a>
-                        </div>
-                        <div class="col-10 mt-3" style="margin-left:6.5%">
+                        <div class="col-11 mt-3" style="margin-left:6.5%">
                             <h6> Nivel A2
                             </h6>
                         </div>
@@ -795,11 +408,7 @@
                                 </div> 
                             </div>
                         </div>
-                        <div class="col-1">
-                        <a class="edit-btn" id="btn-edit-experience"><i class="fas fa-pen"></i></a>
-                        <a class="delete-btn" id="btn-delete-experience"><i  class="fa-solid fa-trash"></i></a>
-                        </div>
-                        <div class="col-10 mt-3" style="margin-left:6.5%">
+                        <div class="col-11 mt-3" style="margin-left:6.5%">
                             <h6>Aprobado con nivel C1
                             </h6>
                         </div>
@@ -813,57 +422,6 @@
         <div class="card-titles">
             <div class="row justify-content-start" >
                 <div class="col-10"><h3>Proyectos</h3></div>
-                <div class="col-2">
-                    <div class="row justify-content-end">
-                        <!--Add proyect trigger-->
-                        <a class="col-1" id="btn-add-proyects"><i class="fa fa-plus" type="button" data-bs-toggle="modal" data-bs-target="#addProyect"></i></a>
-
-                        <!--MODAL add proyect--> 
-                            <div class="modal fade" id="addProyect" tabindex="-1" aria-labelledby="add-proyect" aria-hidden="true">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="add-proyect">Nuevo proyecto</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="Proyecto" class="form-label">Nombre del proyecto</label>
-                                                <input type="text" class="form-control" id="Proyecto" name="Proyecto" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="Org-proyect" class="form-label">Organización</label>
-                                                <input type="password" class="form-control" id="Org-proyect" name="Org-proyect" required>
-                                            </div>
-                                            <div class="mb-4">
-                                                <label for="LogoOrg" class="form-label">Logo de la Organización</label>
-                                                <input class="form-control" type="file" id="LogoOrg" name="LogoOrg" required>
-                                            </div>
-                                            <div class="row g-3">
-                                            <div class="form-group col-md-6 mb-3">
-                                                <label for="FechaInicio" class="form-label">Año de Inicio</label>
-                                                <input class="form-control" type="number" id="FechaInicio" name="FechaInicio" required>
-                                            </div>
-                                            <div class="form-group col-md-6 mb-3">
-                                                <label for="FechaFinalizacion" class="form-label">Año de Finalización</label>
-                                                <input class="form-control" type="number" id="FechaFinalizacion" name="FechaFinalizacion">
-                                            </div>
-                                            </div>
-                                            <div>
-                                                <label for="ProyectoDescripcion" class="form-label">Descripción</label>
-                                                <textarea class="form-control" id="ProyectoDescripcion" rows="3" name="ProyectoDescripcion" required></textarea>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">Guardar cambios</button>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="card-body" style="padding:0px">
@@ -891,58 +449,7 @@
                                 </div> 
                             </div>
                         </div>
-                        <div class="col-1">
-                        <!--Edit proyect trigger-->
-                        <a class="edit-btn" id="btn-edit-proyects"><i class="fas fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editProyect"></i></a>
-                        <a class="delete-btn" id="btn-delete-proyects"><i  class="fa-solid fa-trash" ></i></a>
-
-                        <!--MODAL edit proyect--> 
-                            <div class="modal fade" id="editProyect" tabindex="-1" aria-labelledby="edit-proyect" aria-hidden="true">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="edit-proyect">Editar proyecto</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="Proyecto" class="form-label">Nombre del proyecto</label>
-                                                <input type="text" class="form-control" id="Proyecto" name="Proyecto" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="Org-proyect" class="form-label">Organización</label>
-                                                <input type="password" class="form-control" id="Org-proyect" name="Org-proyect" required>
-                                            </div>
-                                            <div class="mb-4">
-                                                <label for="LogoOrg" class="form-label">Logo de la Organización</label>
-                                                <input class="form-control" type="file" id="LogoOrg" name="LogoOrg" required>
-                                            </div>
-                                            <div class="row g-3">
-                                            <div class="form-group col-md-6 mb-3">
-                                                <label for="FechaInicio" class="form-label">Año de Inicio</label>
-                                                <input class="form-control" type="number" id="FechaInicio" name="FechaInicio" required>
-                                            </div>
-                                            <div class="form-group col-md-6 mb-3">
-                                                <label for="FechaFinalizacion" class="form-label">Año de Finalización</label>
-                                                <input class="form-control" type="number" id="FechaFinalizacion" name="FechaFinalizacion">
-                                            </div>
-                                            </div>
-                                            <div>
-                                                <label for="ProyectoDescripcion" class="form-label">Descripción</label>
-                                                <textarea class="form-control" id="ProyectoDescripcion" rows="3" name="ProyectoDescripcion" required></textarea>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">Guardar cambios</button>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-10 mt-3" style="margin-left:6.5%">
+                        <div class="col-11 mt-3" style="margin-left:6.5%">
                             <h6>
                                 Entrelazando culturas es un proyecto llevado a cabo por los alumnos de 4to año del Instituto León XIII. Su principal objetivo es organizar un "viaje de estudio" en Córdoba para los alumnos de séptimo grado de las escuelas de Pastos Chicos, Huáncar y Puesto Sey, todas ubicadas en Susques, Jujuy. Con esto se busca propiciar un intercambio cultural entre las comunidades atacamas y los estudiantes de la escuela de Córdoba; fortalecer los lazos de amistad entre los mismos; experimentar una situación de "aprendizaje-servicio" integrada desde varias asignaturas de cuarto año y de varios actores de la comunidad educativa; y fortificar el cuidado de la vida y naturaleza (Pachamama). 
       Sumado a esto, los alumnos de esas comunidades viven una experiencia inolvidable, teniendo en cuenta que en Jujuy las necesidades básicas como el acceso al agua potable y la atención sanitaria primaria no están debidamente cubiertas, y cuya resolución está dificultada por la falta de comunicación entre las autoridades de las comunidades y políticas públicas que las incluyan debidamente. De esta manera, el proyecto también busca mejorar la comunicación entre los grupos de pobladores.
@@ -959,9 +466,7 @@
                                     <div class="title-list">
                                         <span style="font-weight:600">
                                             <span>
-                                                Entrevista y redacción de una nota a Ricardo Irastorza, escritor del libro “El orden de los actores”, de editorial
-      
-      Comunicarte (Córdoba) 
+                                                Entrevista y redacción de una nota a Ricardo Irastorza, escritor del libro “El orden de los actores”, de editorial Comunicarte (Córdoba) 
                                             </span>
                                         </span>
                                     </div>
@@ -971,11 +476,7 @@
                                 </div> 
                             </div>
                         </div>
-                        <div class="col-1">
-                        <a class="edit-btn" id="btn-edit-proyects"><i class="fas fa-pen"></i></a>
-                        <a class="delete-btn" id="btn-delete-proyects"><i  class="fa-solid fa-trash"></i></a>
-                        </div>
-                        <div class="col-10 mt-3" style="margin-left:6.5%">
+                        <div class="col-11 mt-3" style="margin-left:6.5%">
                             <h6>
                             </h6>
                         </div>
@@ -989,40 +490,6 @@
         <div class="card-titles">
             <div class="row justify-content-start" >
                 <div  class="col-10"><h3>Habilidades duras y blandas</h3></div>
-                <div class="col-2">
-                    <div class="row justify-content-end">
-                        <!--Add skill trigger-->
-                        <a class="col-1" id="btn-add-habilities"><i class="fa fa-plus" type="button" data-bs-toggle="modal" data-bs-target="#addSkill"></i></a>
-    
-                        <!--MODAL add skill--> 
-                        <div class="modal fade" id="addSkill" tabindex="-1" aria-labelledby="add-skill" aria-hidden="true">
-                            <div class="modal-dialog">
-         <div class="modal-content">
-             <div class="modal-header">
-             <h1 class="modal-title fs-5" id="add-skill">Nueva habilidad</h1>
-             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-             </div>
-             <div class="modal-body">
-                 <form>
-                     <div class="mb-3">
-                         <label for="Habilidad" class="form-label">Habilidad</label>
-                         <input type="text" class="form-control" id="Habilidad" name="Habilidad" required>
-                     </div>
-                     <div class="mb-3">
-                         <label for="PorcentajeSkill" class="form-label">Porcentaje de dominio de la habilidad</label>
-                         <input class="form-control" type="number" id="PorcentajeSkill" name="PorcentajeSkill" required>
-                     </div>
-                 </form>
-             </div>
-             <div class="modal-footer">
-             <button type="button" class="btn btn-primary">Guardar cambios</button>
-             </div>
-         </div>
-                            </div>
-                        </div>
-    
-                    </div>
-                </div>
             </div>
         </div>
         <div class="card-body" style="padding:1.5% 0 0 0 ">
@@ -1030,96 +497,42 @@
                 <div class="col-2">
                     <h5>No se qué skill</h5>
                 </div>
-                <div class="col-9 pb-4">
+                <div class="col-10 pb-4">
                     <div class="progress mt-2">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"> 75%</div>
                     </div> 
                 </div>
-                <div class="col-1">
-                    <!--edit skill trigger-->
-                    <a class="edit-btn" id="btn-edit-habilities"><i class="fas fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editSkill"></i></a>
-                    <a class="delete-btn" id="btn-delete-habilities"><i  class="fa-solid fa-trash"></i></a>
-    
-                
-                    <!--MODAL edit skill--> 
-                    <div class="modal fade" id="editSkill" tabindex="-1" aria-labelledby="edit-skill" aria-hidden="true">
-                        <div class="modal-dialog">
-     <div class="modal-content">
-         <div class="modal-header">
-         <h1 class="modal-title fs-5" id="edit-skill">Editar habilidad</h1>
-         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-         </div>
-         <div class="modal-body">
-             <form>
-                 <div class="mb-3">
-                     <label for="Habilidad" class="form-label">Habilidad</label>
-                     <input type="text" class="form-control" id="Habilidad" name="Habilidad" required>
-                 </div>
-                 <div class="mb-3">
-                     <label for="PorcentajeSkill" class="form-label">Porcentaje de dominio de la habilidad</label>
-                     <input class="form-control" type="number" id="PorcentajeSkill" name="PorcentajeSkill" required>
-                 </div>
-             </form>
-         </div>
-         <div class="modal-footer">
-         <button type="button" class="btn btn-primary">Guardar cambios</button>
-         </div>
-     </div>
-                        </div>
-                    </div>
-                    
-                </div>
-    
                 <div class="col-2">
                     <h5>No se qué skill</h5>
                 </div>
-                <div class="col-9 pb-4">
+                <div class="col-10 pb-4">
                     <div class="progress mt-2">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"> 75%</div>
                     </div> 
                 </div>
-                <div class="col-1">
-                    <a class="edit-btn" id="btn-edit-habilities"><i class="fas fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editSkill"></i></a>
-                    <a class="delete-btn" id="btn-delete-habilities"><i  class="fa-solid fa-trash"></i></a>
-                </div>
-    
                 <div class="col-2">
                     <h5>No se qué skill</h5>
                 </div>
-                <div class="col-9 pb-4">
+                <div class="col-10 pb-4">
                     <div class="progress mt-2">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"> 75%</div>
                     </div> 
                 </div>
-                <div class="col-1">
-                    <a class="edit-btn" id="btn-edit-habilities"><i class="fas fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editSkill"></i></a>
-                    <a class="delete-btn" id="btn-delete-habilities"><i  class="fa-solid fa-trash"></i></a>
-                </div>
-    
                 <div class="col-2">
                     <h5>No se qué skill</h5>
                 </div>
-                <div class="col-9 pb-4">
+                <div class="col-10 pb-4">
                     <div class="progress mt-2">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"> 75%</div>
                     </div> 
                 </div>
-                <div class="col-1">
-                    <a class="edit-btn" id="btn-edit-habilities"><i class="fas fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editSkill"></i></a>
-                    <a class="delete-btn" id="btn-delete-habilities"><i  class="fa-solid fa-trash"></i></a>
-                </div>
-    
                 <div class="col-2">
                     <h5>No se qué skill</h5>
                 </div>
-                <div class="col-9 pb-4">
+                <div class="col-10 pb-4">
                     <div class="progress mt-2">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"> 75%</div>
                     </div> 
-                </div>
-                <div class="col-1">
-                    <a class="edit-btn" id="btn-edit-habilities"><i class="fas fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editSkill"></i></a>
-                    <a class="delete-btn" id="btn-delete-habilities"><i  class="fa-solid fa-trash"></i></a>
                 </div>
             </div>
         </div>          
